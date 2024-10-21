@@ -4,11 +4,12 @@ porém a funciiionalidade se torna a mesma.
 
 conteirners são imagens.
 """
-
+import os 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from contextlib import contextmanager
 
+os.system("cls || clear")
 
 #Parâmetros de conexão com MYSQL.
 db_user = "user"
@@ -19,12 +20,12 @@ db_name = "meu_banco"
 
 #URL de conexão para BD MySQL.
 # DATA_BASE_URL = f"mysqul+pymysql://usuario:senha@host:porta/nome_bd"
-DATA_BASE_URL = f"mysqul+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+DATABASE_URL = f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
 
 
 
 # Conectando ao banco de dados.
-db = create_engine(DATA_BASE_URL)
+db = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=db)
 session = Session()
 
