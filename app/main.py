@@ -1,5 +1,5 @@
 from services.usuario_services import UsuarioService
-from repositeries.usuario_repositery import UsuarioRepository
+from repositories.usuario_repository import UsuarioRepository
 from config.connection import Session
 
 
@@ -18,4 +18,4 @@ def main():
         print(f"{usuario.id} - {usuario.nome} -{usuario.email} - {usuario.senha}")
 
 if __name__ == "__main__":
-    main() # chamando para a função
+    main() # Chamando para a função 

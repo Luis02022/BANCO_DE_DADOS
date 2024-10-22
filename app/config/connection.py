@@ -4,12 +4,11 @@ porém a funciiionalidade se torna a mesma.
 
 conteirners são imagens.
 """
-import os 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from contextlib import contextmanager
 
-os.system("cls || clear")
+
 
 #Parâmetros de conexão com MYSQL.
 db_user = "user"
