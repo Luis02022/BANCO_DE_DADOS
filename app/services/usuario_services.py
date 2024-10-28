@@ -1,8 +1,8 @@
 from models.usuario import Usuario
-from app.repositories.usuario_repository import UsuarioRepository
+from repositories.usuario_repository import UsuarioRepository
 
 class UsuarioService:
-    def __init__(self, repository: UsuarioRepository) -> None:
+    def __init__(self, repository: UsuarioRepository):
         self.repository = repository
 
     def criar_usuario(self, nome: str, email: str, senha: str):
